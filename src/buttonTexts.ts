@@ -1,3 +1,4 @@
+// Chenge these to customize buttoms texts
 export const negativeTexts = [
   'No',
   'Are you sure?',

@@ -7,6 +7,8 @@ export type Polroid = {
   caption: string;
 };
 
+// Customize Polaroids location, src and z-index
+
 export const Polaroids: Polroid[] = [
   {
     img: '/example-1.jpg',

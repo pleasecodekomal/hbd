@@ -8,8 +8,7 @@ const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/yes" element={<Yes />} /> {/* Corrected to use <Yes /> */}
-        {/* Define other routes as needed */}
+        <Route path="/yes" element={<Yes />} />
       </Routes>
     </BrowserRouter>
   );

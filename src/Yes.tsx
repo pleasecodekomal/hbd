@@ -2,6 +2,7 @@ import Envelope from './components/Envelope';
 import './Yes.css';
 
 const Yes = () => {
+  // Gifts inside the envelopes
   const messages = [
     'You get massage this evening.',
     'You can choose the movie we are watching.',

@@ -24,6 +24,7 @@ function App() {
     setYesClicks((prevClick) => prevClick + 1);
     setYesText((prevText) => prevText + 1);
     if (yesClicks === positiveTexts.length - 1) {
+      // Alert message
       alert('You have been warned.');
       navigate('/yes');
     }
