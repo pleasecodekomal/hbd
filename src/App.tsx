@@ -40,15 +40,16 @@ function App() {
             <h1 className="kreep">
               <button
                 onClick={handleYesClick}
-                className="button bg-green-600 text-slate-100 border-2 border-solid border-green-800 xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1 duration-[400ms] cursor-pointer rounded-[20%] hover:hover:bg-[#1e8b3f] hover:animate-none link buzz-out-on-hover"
+                className="button bg-green-600 text-slate-100 border-2 border-solid border-green-800 xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1 duration-[400ms] cursor-pointer rounded-[20%] hover:bg-green-800 hover:animate-none link buzz-out-on-hover"
               >
                 <b>{positiveTexts[yesText]}</b>
               </button>
             </h1>
             <div>
               <button
-                className="cursor-pointer [transition:all_0.3s_ease-in-out] bg-red-600 text-slate-100 border-2 border-solid border-red-800 rounded-[20%] xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1 hover:scale-[0.8]"
-                style={{ transform: `scale(${size})` }}
+                className={`cursor-pointer scale-[${size}] hover:scale-[${
+                  size - 0.1
+                }] [transition:all_0.3s_ease-in-out] bg-red-600 text-slate-100 border-2 border-solid border-red-800 rounded-[20%] xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1`}
                 onClick={handleNoClick}
               >
                 {negativeTexts[textIndex]}
