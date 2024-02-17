@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import './App.css';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Background from './components/Background';
 import { negativeTexts, positiveTexts } from './buttonTexts';
@@ -14,7 +14,10 @@ function App() {
   const [yesText, setYesText] = useState(0);
 
   const handleNoClick = () => {
-    setSize((prevSize) => prevSize - 0.05);
+    if (size < 0.05) {
+      return;
+    }
+    setSize((prevSize) => Math.round((prevSize - 0.05) * 100) / 100);
     setTextIndex((prevIndex) => (prevIndex + 1) % negativeTexts.length);
   };
 
@@ -33,9 +36,7 @@ function App() {
       <div className="max-w-screen-xl h-screen overflow-auto mx-[auto] my-[0] p-8 text-center">
         <Background />
         <div className="flex flex-col gap-24 mt-44 justify-center">
-          <h1 className="text-sm md:text-6xl z-50 white-shadow">
-            Wanna be my Valentine?
-          </h1>
+          <h1 className="text-sm md:text-6xl z-50 white-shadow">Wanna be my Valentine?</h1>
           <div className="flex justify-center gap-16 z-50">
             <h1 className="kreep">
               <button
@@ -47,10 +48,11 @@ function App() {
             </h1>
             <div>
               <button
-                className={`cursor-pointer scale-[${size}] hover:scale-[${
-                  size - 0.1
-                }] [transition:all_0.3s_ease-in-out] bg-red-600 text-slate-100 border-2 border-solid border-red-800 rounded-[20%] xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1`}
+                className={`cursor-pointer [transition:all_0.3s_ease-in-out] bg-red-600 text-slate-100 border-2 border-solid border-red-800 rounded-[20%] xl:p-16 p-7 text-center no-underline inline-block text-xs md:text-2xl mx-0.5 my-1`}
                 onClick={handleNoClick}
+                onMouseOver={() => setSize((prevSize) => prevSize - 0.2)}
+                onMouseOut={() => setSize((prevSize) => prevSize + 0.2)}
+                style={{ transform: `scale(${size})` }}
               >
                 {negativeTexts[textIndex]}
               </button>
