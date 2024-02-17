@@ -4,6 +4,7 @@ import { Polaroids } from '../polaroids';
 const Background = () => {
   const polaroids = Polaroids.map((picture, index) => (
     <Polaroid
+      key={`polariod-${index}`}
       id={index}
       src={picture.img}
       top={picture.top}
