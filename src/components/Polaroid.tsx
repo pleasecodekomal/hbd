@@ -19,9 +19,11 @@ const Polaroid = ({ top, left, index, rotate, src, children }: Props) => {
   };
 
   return (
-    <div className="polaroid absolute item max-w-64" style={styles}>
+    <div className="polaroid absolute item max-w-64 min-w-40" style={styles}>
       <img src={src} alt="Custom" />
-      <div className="caption">{children}</div>
+      <div className="md:text-2xl text-sm text-center leading-[2em]">
+        {children}
+      </div>
     </div>
   );
 };

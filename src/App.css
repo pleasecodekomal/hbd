@@ -191,11 +191,7 @@ h1.wiggle:hover {
   height: auto;
   opacity: 60%;
 }
-.caption {
-  font-size: 1.4rem;
-  text-align: center;
-  line-height: 2em;
-}
+
 .item {
   width: 30%;
   filter: grayscale(100%);
