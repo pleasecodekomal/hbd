@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <div className="max-w-screen-xl h-screen overflow-auto mx-[auto] my-[0] p-8 text-center">
+      <div className="max-w-screen h-screen overflow-hidden relative my-[0] p-8 text-center">
         <Background />
         <div className="flex flex-col gap-24 md:mt-44 mt-32 justify-center">
           <h1 className="text-3xl md:text-6xl mb-14 md:mb-0 z-50 white-shadow">
