@@ -15,7 +15,7 @@ const Background = () => {
       {picture.caption}
     </Polaroid>
   ));
-  return <div className="">{polaroids}</div>;
+  return <div>{polaroids}</div>;
 };
 
 export default Background;

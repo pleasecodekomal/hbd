@@ -176,33 +176,8 @@ h1.wiggle:hover {
 }
 
 /* Polaroid */
-.polaroid {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
-}
-.polaroid > img {
-  max-width: 100%;
-  height: auto;
-  opacity: 60%;
-}
 
-.item {
-  width: 30%;
-  filter: grayscale(100%);
-  left: 0px;
-}
-
-.item:hover {
-  filter: none;
-  transform: scale(1, 1) rotate(0deg) !important;
-  transition: all 0.35s;
-}
 .item:hover .polaroid:before {
   transform: rotate(0deg);
   transition: all 0.35s;
-}
-
-.polaroid > img:hover {
-  opacity: 100%;
 }
