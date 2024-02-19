@@ -3,16 +3,6 @@
 }
 
 /* Envelope */
-.envelope {
-  width: 270px;
-  margin: 150px auto;
-  margin-bottom: 40px;
-  height: 170px;
-  position: relative;
-  background: #f7c7c7;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px -3px #989898;
-}
 
 .top,
 .bottom {
@@ -66,23 +56,6 @@
   z-index: 3;
   transition-delay: 0.4s;
   top: -50%; /* Adjusted for new proportion */
-}
-
-.paper {
-  width: 90%;
-  height: 90%;
-  background: #f6f8e7;
-  margin: 6px auto 0;
-  box-shadow: 0px 0px 2px 0px #909090;
-  transition: all 0.5s ease-out;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .envelope.fold .back {

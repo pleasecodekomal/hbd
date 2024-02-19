@@ -4,6 +4,7 @@ import { Polaroids } from '../polaroids';
 const Background = () => {
   const polaroids = Polaroids.map((picture, index) => (
     <Polaroid
+      key={`polariod-${index}`}
       id={index}
       src={picture.img}
       top={picture.top}
@@ -14,7 +15,7 @@ const Background = () => {
       {picture.caption}
     </Polaroid>
   ));
-  return <div className="">{polaroids}</div>;
+  return <div>{polaroids}</div>;
 };
 
 export default Background;
